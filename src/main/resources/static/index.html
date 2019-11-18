@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+<h1>Тестовое задание</h1>
+<h3>Организации спортивных соревнований</h3>
+<form method="get">
+    <fieldset>
+        <legend>Получить расписание</legend>
+        <label>Название соревнования: <input type="text" name="nameTournament"></label>
+        <label>Количество команд: <input type="number" name="amountTeams"></label>
+        <p>
+            <button formaction="/timetable/json">JSON</button>
+            <button formaction="/timetable/html">HTML</button>
+        </p>
+    </fieldset>
+</form>
+<br>
+<form method="post">
+    <fieldset>
+        <legend>Сохранение результата матча</legend>
+        <p><label>Название соревнования: <input type="text" name="nameTournament"></label></p>
+        <p>
+            <label>Название команды 1: <input type="text" name="nameTeam1"></label>
+            <label>Количество забитых голов: <input type="number" min="-1" name="goalsTeam1"></label>
+        </p>
+        <label>Название команды 2: <input type="text" name="nameTeam2"></label>
+        <label>Количество забитых голов: <input type="number" min="-1" name="goalsTeam2"></label>
+        <p>
+            <button formaction="/changeScore">Сохранить</button>
+        </p>
+
+    </fieldset>
+</form>
+<br>
+<form method="get">
+    <fieldset>
+        <legend>Получить расписание и таблицу результатов</legend>
+        <label>Название соревнования: <input type="text" name="nameTournament"></label>
+        <p>
+            <button type="submit" formaction="/allData/json">JSON</button>
+            <button formaction="/allData/html">HTML</button>
+        </p>
+    </fieldset>
+</form>
+</body>
+</html>
